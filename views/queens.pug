@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}. My name is Phani Naidu Ratnala
+  - let results=[{queen_name:"Jhansi Rani Lakshmi Bhai",queen_country:"India",networth:"100"},{queen_name:"Elizabeth",queen_country:"England",networth:"1000"},{queen_name:"Victoria",queen_country:"United Kingdom",networth:"2000"}]
+  div(class="container-fluid")
+    div(class="row")
+      each queens, index in results
+        div(class="col-sm-2") #{queens.queen_name} - #{queens.queen_country} - $#{queens.networth}
